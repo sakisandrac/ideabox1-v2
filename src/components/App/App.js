@@ -14,14 +14,19 @@ const addIdea = (newIdea) => {
   setIdeas((prev) => {
    return [...prev, newIdea]
   })
-  console.log(ideas)
+
+}
+
+const deleteIdea = (id) => {
+  const filteredIdeas = ideas.filter(idea => idea.id != id);
+  setIdeas(filteredIdeas)
 }
 
   return (
     <main className="app">
       <h1>IdeaBox</h1>
-      <Form addIdea={addIdea}/>
-      {ideas.length > 0 ? <Ideas ideas={ideas}/> : <h2>No ideas yet -- add some!</h2>}
+      <Form addIdea={addIdea} />
+      {ideas.length > 0 ? <Ideas ideas={ideas} deleteIdea={deleteIdea}/> : <h2>No ideas yet -- add some!</h2>}
     </main>
   );
 }

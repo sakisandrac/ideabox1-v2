@@ -15,6 +15,11 @@ const Form = (props) => {
     }
     console.log(newIdea)
     props.addIdea(newIdea);
+    clearInputs();
+  }
+
+  const clearInputs = () => {
+    setForm({ title: '', description: '' });
   }
 
   const handleChange = (event) => {
