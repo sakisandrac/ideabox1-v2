@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react'
+import Ideas from '../Ideas/Ideas'
 
 function App() {
 const [ideas, setIdeas] = React.useState([
@@ -8,15 +9,11 @@ const [ideas, setIdeas] = React.useState([
   { id: 3, title: 'Learn a martial art', description: 'To exact vengeance upon my enemies' },
 ])
 
-const ideaTitles= ideas.map((idea) => {
-  return <p>{idea.title}</p>
-})
-
   return (
-    <div>
+    <main className="app">
       <h1>IdeaBox</h1>
-      <p>{ideaTitles}</p>
-    </div>
+      {ideas.length > 0 ? <Ideas ideas={ideas}/> : <h2>No ideas yet -- add some!</h2>}
+    </main>
   );
 }
 
