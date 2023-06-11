@@ -5,9 +5,9 @@ import Form from '../Form/Form'
 
 function App() {
 const [ideas, setIdeas] = React.useState([
-  { id: 1, title: 'Prank Travis', description: 'Stick googly eyes on all his stuff' },
-  { id: 2, title: 'Make a secret password app', description: 'So you and your rideshare driver can both know neither one of you is lying' },
-  { id: 3, title: 'Learn a martial art', description: 'To exact vengeance upon my enemies' },
+  { id: 1, title: 'Make IdeaBox app', description: 'Practice using react' },
+  { id: 2, title: 'Brainstorm ideas for app', description: 'Apps that will be useful to me' },
+  { id: 3, title: 'Build API for ideabox data', description: 'To save ideabox storage and learn a bit of backend' },
 ])
 
 const addIdea = (newIdea) => {
@@ -24,7 +24,7 @@ const deleteIdea = (id) => {
 
   return (
     <main className="app">
-      <h1>IdeaBox</h1>
+      <h1>Saki's IdeaBox</h1>
       <Form addIdea={addIdea} />
       {ideas.length > 0 ? <Ideas ideas={ideas} deleteIdea={deleteIdea}/> : <h2>No ideas yet -- add some!</h2>}
     </main>
