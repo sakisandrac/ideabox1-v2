@@ -11,7 +11,7 @@ React, create-react-app, CSS, HTML, JavaScript
 At the time of this project, I am a student at Turing School of Software Engineering in the front end development program, in mod 2. This is a project that I did in my own time, in order to prepare for our lesson on learning React in mod 3. I pre-read the <a href="https://frontend.turing.edu/lessons/module-3/react-2-the-how.html"> IdeaBox lesson from Turing's mod 3 curriculum</a>, and converted the class component based React into functional component based React. 
 
 ## Project Preview
-<img width="949" alt="Screenshot 2023-06-10 at 6 29 34 PM" src="https://github.com/sakisandrac/ideabox1/assets/118419729/bddb9886-2d64-46dc-b548-50148e1fcf7a">
+![Jun-10-2023 18-36-54](https://github.com/sakisandrac/ideabox1/assets/118419729/5d54a74a-20c4-4ef1-9348-04b919cfeb55)
 
 
 ## Set up
