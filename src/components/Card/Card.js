@@ -3,14 +3,8 @@ import './Card.css'
 
 const Card = (props) => {
 
-  // const deleteIdea = (id) => {
-  //   props.deleteIdea(id);
-  // }
-
   const deleteIdea = (id) => {
-    // const filteredIdeas = ideas.filter(idea => idea.id != id);
-    // setIdeas(filteredIdeas)
-    fetch(`http://localhost:3003/api/v1/ideas/${id}`, {
+    fetch(`https://ideabox-api.vercel.app/api/v1/ideas/${id}`, {
       method: 'DELETE'
     })
     .then((res) => res.json())

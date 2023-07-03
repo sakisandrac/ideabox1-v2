@@ -11,7 +11,7 @@ const Form = ({setIdeas}) => {
     event.preventDefault();
     console.log(form);
 
-  fetch('http://localhost:3003/api/v1/ideas', {
+  fetch('https://ideabox-api.vercel.app/api/v1/ideas', {
     method:'POST',
     body: JSON.stringify({
       id: Date.now(),

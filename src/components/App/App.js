@@ -7,7 +7,7 @@ function App() {
 const [ideas, setIdeas] = React.useState([]);
 
 useEffect(()=> {
-  fetch('http://localhost:3003/api/v1/ideas')
+  fetch('https://ideabox-api.vercel.app/api/v1/ideas')
   .then(res => res.json())
   .then(data => {
     setIdeas(data.ideas)
