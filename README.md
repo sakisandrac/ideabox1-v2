@@ -1,8 +1,8 @@
-# Ideabox version 1
+# Ideabox version 1 (2.0)
 This application allows users jot down ideas on cards. Users can write the title of their ideas, and a short description and it will be renderedo to the page.
 
 ## Technologies Used
-React, create-react-app, CSS, HTML, JavaScript
+React, create-react-app, CSS, HTML, JavaScript, fetch
 
 ## Contributors:
 <a href="https://github.com/sakisandrac">Saki Chatphatthanasiri</a>
@@ -19,5 +19,5 @@ At the time of this project, I am a student at Turing School of Software Enginee
 2. In the terminal, open this app by running the command `cd <project folder name>`
 3. Run the command `npm start` to start the server.
 4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-5. You can also view the project <a href="https://ideabox1.vercel.app/">here</a>.
+5. You can also view the project <a href="https://ideabox1-v2.vercel.app/">here</a>.
 6. Use control C to stop the server.
