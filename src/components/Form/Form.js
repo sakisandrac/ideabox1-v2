@@ -1,22 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Form.css';
 
-const Form = (props) => {
+const Form = ({setIdeas}) => {
   const [form, setForm] = React.useState({
     title: '',
     description: ''
   })
 
   const submitIdea = (event) => {
-    event.preventDefault()
-    const newIdea = {
+    event.preventDefault();
+    console.log(form);
+
+  fetch('http://localhost:3003/api/v1/ideas', {
+    method:'POST',
+    body: JSON.stringify({
       id: Date.now(),
       ...form
+    }),
+    headers: { 
+      'Content-Type': 'application/json'
     }
-    console.log(newIdea)
-    props.addIdea(newIdea);
+  })
+  .then(response => response.json())
+  .then(data => {
+    setIdeas((prev)=> {
+      return [...prev, data.newIdea]
+    })
+  })
     clearInputs();
   }
+
 
   const clearInputs = () => {
     setForm({ title: '', description: '' });
