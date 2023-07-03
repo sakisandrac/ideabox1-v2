@@ -12,10 +12,6 @@ app.locals = {
 app.use(cors());
 app.use(express.json());
 
-app.listen(3003, () => {
-  console.log('listening on port 3003')
-});
-
 app.get('/api/v1/ideas', (req, res) => {
   const { ideas } = app.locals;
   res.status(200).json({ ideas });
@@ -41,8 +37,6 @@ app.post('/api/v1/ideas', (req, res) => {
     //   })
     // }
 
-    const newId = String(Date.now());
-
     app.locals.ideas.push({ id, title, description })
     res.status(201).json({ 
       message: `your idea for ${title} was successfully added`,
@@ -53,3 +47,23 @@ app.post('/api/v1/ideas', (req, res) => {
       }
     });
 })
+
+app.delete('/api/v1/ideas/:id', (req, res) => {
+  const  { id } = req.params;
+  const { ideas } = app.locals;
+
+  const filteredIdeas = ideas.filter(idea => {
+    return idea.id !== parseInt(id)
+  })
+
+  app.locals.ideas = filteredIdeas;
+
+  res.status(200).json({
+    message: `Idea #${id} has deleted`,
+    ideas: filteredIdeas,
+  })
+})
+
+app.listen(port, () => {
+  console.log(`${app.locals.title} is now running on http://localhost:${port} !`)
+});

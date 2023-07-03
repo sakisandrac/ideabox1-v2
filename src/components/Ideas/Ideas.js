@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../Card/Card'
 import './Ideas.css';
 
-const Ideas = ({ideas, deleteIdea}) => {
+const Ideas = ({ideas, deleteIdea, setIdeas}) => {
   const ideaCards = ideas?.map(idea => {
     return (
       <Card
@@ -11,6 +11,7 @@ const Ideas = ({ideas, deleteIdea}) => {
         id={idea.id}
         key={idea.id}
         deleteIdea= {deleteIdea}
+        setIdeas={setIdeas}
       />
     )
   })
